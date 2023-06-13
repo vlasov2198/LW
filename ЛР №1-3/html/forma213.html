@@ -1,0 +1,108 @@
+<script>
+            function func_form_od() {
+				var name = document.getElementById("name").value;
+				var surname = document.getElementById("surname").value;
+				var email = document.getElementById("email").value;
+				var password = document.getElementById("password").value;
+				var repeatpassword = document.getElementById("repeatpassword").value;
+
+				if(name == undefined || name == "" || name == " ")
+				{
+					alert("Вы не указали свое имя!");
+					return 0;
+				}
+				if(surname == undefined || surname == "" || surname == " ")
+				{
+					alert("Вы не указали свою фамилию!");
+					return 0;
+				}
+				if(email == undefined || email == "" || email == " ")
+				{
+					alert("Вы не указали электронную почту!");
+					return 0;
+				}
+				if(email.search("@") == -1)
+				{
+					alert("Введена некорректная электронная почта!");
+					return 0;
+				}
+				if(password == undefined || password == "" || password == " ")
+				{
+					alert("Вы не указали свое пароль!");
+					return 0;
+				}
+				if(repeatpassword == undefined || repeatpassword == "" || repeatpassword == " ")
+				{
+					alert("Вы не указали пароль еще раз!");
+					return 0;
+				}
+				if(repeatpassword != password)
+				{
+					alert("Пароли не совпадают!");
+					return 0;
+				}
+			}
+
+</script>
+
+<div>
+
+		<head>
+			<h1 style="text-align: center;">Форма регистрации</h1>
+		</head>
+		
+		<p style="text-align: center;">
+			&nbsp;
+		</p>
+
+		<p style="text-align: center;">
+			<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><strong>Имя:</strong></span></span>
+		</p>
+
+		<p style="text-align: center;">
+			<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><strong><input id="name" type="text"></strong></span></span><br>
+			&nbsp;
+		</p>
+
+		<p style="text-align: center;">
+			<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><strong>Фамилия:</strong></span></span>
+		</p>
+
+		<p style="text-align: center;">
+			<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><strong><input id="surname" type="text"></strong></span></span><br>
+			&nbsp;
+		</p>
+
+		<p style="text-align: center;">
+			<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><strong>Электронная почта:</strong></span></span>
+		</p>
+
+		<p style="text-align: center;">
+			<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><strong><input id="email" type="text"></strong></span></span><br>
+			&nbsp;
+		</p>
+
+		<p style="text-align: center;">
+			<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><strong>Пароль:</strong></span></span>
+		</p>
+
+		<p style="text-align: center;">
+			<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><strong><input id="password" type="text"></strong></span></span><br>
+			&nbsp;
+		</p>
+
+		<p style="text-align: center;">
+			<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><strong>Повторный пароль:</strong></span></span>
+		</p>
+
+		<p style="text-align: center;">
+			<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><strong><input id="repeatpassword" type="text"></strong></span></span><br>
+			&nbsp;
+		</p>
+
+		<center>
+			<span style="font-family:Arial,Helvetica,sans-serif;"><strong><input class="ipsButton" color="#018f7e" onclick="func_form_od()" style="background-color: #6bcef5; font-size:14px;" type="button" value="Зарегистироваться"></strong></span>
+		</center>
+		<u> </u>
+
+</div>

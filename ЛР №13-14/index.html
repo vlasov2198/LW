@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+</head>
+<body>
+  <p onclick="removeElement(this)">Колесник Александр Андреевич</p>
+  <div onclick="applyAdditionalStyles(this)">02.12.2004</div>
+  <img src="fox.jpg" alt="Картинки нет." style="width: 500px; height: 300px;">
+
+  <style>
+    .date {
+      color: red;
+      background-color: green;
+      font-weight: bold;
+      font-family: Arial;
+      font-size: 16px;
+      border: 2px solid yellow;
+    }
+  </style>
+
+<script>
+  function getDocumentInfo() {
+  var date = new Date();
+  var size = document.documentElement.innerHTML.length;
+  // alert(date + size);
+  }
+  function removeElement(element) {
+  element.remove();
+  }
+  // Вызываем функцию getDocumentInfo() каждые 3 секунды
+  setInterval(getDocumentInfo, 3000);
+  // Использование classList.toggle("date") позволяет добавлять или удалять класс "date"
+  // на элементе при каждом вызове функции. Это позволяет включать или выключать стили,
+  // связанные с классом "date", в зависимости от текущего состояния элемента.
+  function applyAdditionalStyles(element) {
+      element.classList.toggle("date");
+    }
+
+  // function checkCookieEnabled() {
+  //   var cookieEnabled = navigator.cookieEnabled;
+  //   alert(cookieEnabled);
+  // }
+  // checkCookieEnabled();
+  
+// Закрытие текущего окна браузера через 2 секунды
+setTimeout(function() {
+window.close();
+}, 2000);
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* 3. Селекторы в CSS */
+h1 {
+  color: #333333;
+  text-align: left;
+}
+
+p {
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+a {
+  /* Шрифт */
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
+  font-style: italic;
+  /* Цвет */
+  color: red;
+  /* Оформление текста */
+  text-decoration: underline;
+
+}
+
+/* Списки */
+ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+/* Таблицы */
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 2px solid #cccccc;
+  padding: 5px;
+}
+
+
+/* Поля и отступы */
+.padding-example {
+  padding: 10px;
+}
+
+.margin-example {
+  margin: 20px;
+}
+
+/* Границы */
+.border-example {
+  border: 1px solid #333333;
+}
+
+
+/* 6. Каскадность CSS и правило приоритетов (html-ссылки*/
+/* Если элемент имеет идентификатор "special-paragraph", применяются эти стили */
+#special-paragraph {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Если элемент находится внутри элемента с классом "highlight", применяются эти стили */
+.highlight p {
+  font-size: 16px;
+}
+
+/* Если элемент одновременно имеет классы "red-text" и "underline", применяются эти стили */
+.red-text.underline {
+  color: green;
+  text-decoration: none;
+}
